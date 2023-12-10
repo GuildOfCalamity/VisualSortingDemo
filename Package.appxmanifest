@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Package
+  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+  xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+  xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
+  IgnorableNamespaces="uap rescap">
+
+  <Identity
+    Name="811164ea-483b-44f2-98fb-d348647dbe19"
+    Publisher="CN=migue"
+    Version="1.0.0.0" />
+
+  <Properties>
+    <DisplayName>VisualSortingItems</DisplayName>
+    <PublisherDisplayName>migue</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+  </Dependencies>
+
+  <Resources>
+    <Resource Language="x-generate"/>
+  </Resources>
+
+  <Applications>
+    <Application Id="App"
+      Executable="$targetnametoken$.exe"
+      EntryPoint="$targetentrypoint$">
+      <uap:VisualElements
+        DisplayName="Visual Sorting Items"
+        Description="WinUI3 demo - Visual Sorting Items"
+        BackgroundColor="transparent"
+        Square150x150Logo="Assets\Square150x150Logo.png"
+        Square44x44Logo="Assets\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" />
+        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+      </uap:VisualElements>
+
+		<!-- This extension allow to execute the packaged app (MSIX) via command line
+		 using the command VisualSortingItemsCL.exe-->
+		<!-- You need to add these namespace xmlns:uap3 and xmlns:desktop. Look at the top of this file. -->
+		<Extensions>
+			<uap3:Extension
+				  Category="windows.appExecutionAlias"
+				  EntryPoint="Windows.FullTrustApplication">
+				<uap3:AppExecutionAlias>
+					<desktop:ExecutionAlias Alias="VisualSortingItemsCL.exe" />
+				</uap3:AppExecutionAlias>
+			</uap3:Extension>
+		</Extensions>
+
+	</Application>
+  </Applications>
+
+  <Capabilities>
+    <rescap:Capability Name="runFullTrust" />
+  </Capabilities>
+</Package>

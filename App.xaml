@@ -1,0 +1,24 @@
+﻿<Application
+    x:Class="VisualSortingItems.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VisualSortingItems">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <!--  Other merged dictionaries here  -->
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--  Fonts  -->
+            <!--
+            <FontFamily x:Key="ScanLineFont">ms-appx:///Assets/stf-crt-scan-lines.ttf#STF_(CRT) SCAN LINES</FontFamily>
+            -->
+            <FontFamily x:Key="ScanLineFont">ms-appx:///Assets/DeadcrtRegular.ttf#DEADCRT</FontFamily>
+
+            <!--  Converters  -->
+            <local:StringFormatConverter x:Key="StringToFormat" />
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
