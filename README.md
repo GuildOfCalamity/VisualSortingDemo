@@ -1,5 +1,7 @@
 # 💻 WinUI3 - Visual Sorting Demo
 
+### A visualized sorting demo using WinUI3 and Microsoft.UI.Xaml.Shapes
+
 ![Example Picture](./ScreenShot.png)
 
 ## 🧾 License/Warranty
